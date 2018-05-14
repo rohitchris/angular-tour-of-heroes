@@ -9,6 +9,8 @@ import { MessageService } from '../message.service';
 })
 export class MessagesComponent implements OnInit {
 
+  today = Date.now();
+
   // constructor() { }
   constructor(public messageService: MessageService) {}
 
