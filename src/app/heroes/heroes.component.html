@@ -5,12 +5,14 @@
 
 <div>
   <label>Hero name:
-    <input #heroName placeholder="Salutation" />
+    <input #heroSalutation placeholder="Salutation" />
     <input #heroName placeholder="Name" />
-    <input #heroName placeholder="Designation" />
+    <input #heroDesignation placeholder="Designation" />
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(heroName.value); heroName.value=''">
+  <button (click)="
+    add(heroSalutation.value, heroName.value, heroDesignation.value); 
+    heroName.value=''; heroSalutation.value=''; heroDesignation.value='';">
     add
   </button>
 </div>
